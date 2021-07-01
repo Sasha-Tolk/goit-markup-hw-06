@@ -48,7 +48,7 @@
                         <li> 
                     <label class="label" for="name">Имя</label>
                     <div class="form-input-div">
-                    <input class="form-input" type="text" id="name">
+                    <input class="modal-input" type="text" name="Name" id="name">
                     <svg class="input-icon" width="12" height="12">
                     <use href="./icons/icons.svg#icon-name"></use>
                     </svg>
@@ -57,7 +57,7 @@
                         <li>
                             <label class="label" for="phone">Телефон</label>
                             <div class="form-input-div">
-                            <input class="form-input" type="number" id="phone">
+                            <input class="modal-input" type="number" name="Phone" id="phone">
                             <svg class="input-icon" width="12" height="12">
                                 <use href="./icons/icons.svg#icon-phone"></use>
                             </svg>
@@ -66,7 +66,7 @@
                             <li>
                                 <label class="label" for="email">Почта</label>
                                 <div class="form-input-div">
-                                <input class="form-input" type="email" id="email">
+                                <input class="modal-input" type="email" name="Email" id="email">
                                 <svg class="input-icon" width="12" height="12">
                                     <use href="./icons/icons.svg#icon-letter"></use>
                                 </svg>
@@ -74,9 +74,10 @@
                             </li>
                     </ul>
                     <label class="label" for="comment">Комментарий</label>
-                    <textarea class="form-input" id="comment" rows="10" placeholder="Введите текст"></textarea>
+                    <textarea class="textarea" id="comment" cols="49" rows="5" placeholder="Введите текст"></textarea>
+                <div class="checkbox-div">  
                     <input class="checkbox" type="checkbox" id="checkbox">
-                    <label class="label-checkbox" for="checkbox">Соглашаюсь с рассылкой и принимаю <a>Условия договора</a></label>
+                    <label class="label-checkbox" for="checkbox">Соглашаюсь с рассылкой и принимаю <a>Условия договора</a></label></div>
                     <button class="studioButton" type="submit">Отправить</button>
                  </div>
             </div>
