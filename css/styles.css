@@ -213,6 +213,8 @@ h1 {
   background-image: url(../icons/vector.svg);
   background-repeat: no-repeat;
   background-position: center;
+
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .buttonModal:hover,
 .buttonModal:focus {
@@ -259,13 +261,25 @@ h1 {
   left: 0px;
   transform: translate(100%, 100%);
   fill: var(--logo-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:hover ~ .input-icon,
+.modal-input:focus ~ .input-icon {
+  fill: var(--accent-color);
 }
 .modal-input {
   width: 448px;
   height: 40px;
   border: rgba(33, 33, 33, 0.2) solid 1px;
   border-radius: 5px;
+  padding-left: 24px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-input:hover,
+.modal-input:focus {
+  border: var(--accent-color) solid 1px;
+}
+
 .modal p {
   font-weight: bold;
   font-size: 20px;
@@ -279,6 +293,11 @@ textarea {
   border-radius: 5px;
 
   display: block;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+textarea:hover,
+textarea:focus {
+  border: var(--accent-color) solid 1px;
 }
 textarea::placeholder {
   font-size: 12px;
@@ -289,17 +308,40 @@ textarea::placeholder {
   font-size: 12px;
   line-height: 1.7;
   color: var(--pretitle-text-color);
-  vertical-align: middle;
 }
 .label-checkbox a {
   color: var(--accent-color);
   text-decoration: underline;
   display: inline;
+  cursor: pointer;
+}
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
 }
 .checkbox-div {
-  margin: 20px auto 30px 52px;
+  margin: 20px auto 30px 30px;
 }
+.modal .form-button {
+  pad: 10px 55px;
+  box-shadow: 0px 5px 1.5px -1.5px rgba(0, 0, 0, 0.14);
+}
+.check-icon {
+  display: inline-block;
+  width: 15px;
+  height: 16px;
+  background-image: url("../icons/icon-border-check.svg");
 
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.checkbox:checked ~ .check-icon {
+  background-image: url("../icons/icon-check.svg");
+}
 /*Hero*/
 /*Features*/
 h2 {
